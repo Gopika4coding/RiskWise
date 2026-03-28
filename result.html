@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assessment Result - RiskWise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme result-page">
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitch" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">RiskWise</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
+
+  <section class="result-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Assessment Result</h1>
+      <p>Your supplier risk analysis has been generated successfully.</p>
+    </div>
+  </section>
+
+  <section class="result-section">
+    <div class="result-card">
+      <h2>Supplier Risk Report</h2>
+      <div id="resultContent"></div>
+      <div class="result-buttons">
+        <button onclick="downloadPDF()">Download PDF Report</button>
+        <a href="index.html" class="back-btn">Back to Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 RiskWise | Email: riskwisesafe@gmail.com | Phone: 1234567890</p>
+  </footer>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
