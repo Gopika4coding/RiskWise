@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RiskWise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitch" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RiskWise</div>
+    <div class="nav-center">
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-spacer"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>RiskWise</h1>
+      <p>Smarter Supplier Decisions Start Here.</p>
+    </div>
+  </header>
+
+  <!-- Historical Data Fetch Section -->
+  <section class="historical-bar">
+    <div class="historical-card">
+      <h2>Fetch Historical Supplier Data</h2>
+      <p>Enter a supplier name to retrieve previously stored supplier performance data and auto-fill the assessment form.</p>
+
+      <div class="history-bar">
+        <input type="text" id="historyName" placeholder="Enter supplier name..." />
+        <button type="button" onclick="fetchHistoricalData()">Fetch</button>
+      </div>
+
+      <div id="historyResult"></div>
+    </div>
+  </section>
+
+  <!-- Main Form -->
+  <main class="form-section">
+    <div class="container">
+      <h2>Supplier Risk Assessment Form</h2>
+
+      <label for="name">Supplier Name</label>
+      <input type="text" id="name" placeholder="Enter supplier name">
+
+      <label for="delivery">On-Time Delivery Rate (%)</label>
+      <input type="number" id="delivery" min="0" max="100" placeholder="e.g. 90">
+
+      <label for="defect">Defective Product Rate (%)</label>
+      <input type="number" id="defect" min="0" max="100" placeholder="e.g. 5">
+
+      <label for="cancel">Order Cancellation Rate (%)</label>
+      <input type="number" id="cancel" min="0" max="100" placeholder="e.g. 3">
+
+      <label for="delay">Delay Frequency (per month)</label>
+      <input type="number" id="delay" min="0" placeholder="e.g. 2">
+
+      <button onclick="calculateRisk()">Submit Assessment</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 RiskWise | Email: riskwisesafe@gmail.com | Phone: 1234567890</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
